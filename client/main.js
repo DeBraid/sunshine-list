@@ -1,16 +1,16 @@
-Meteor.call('getHeaders', function (error, result) {
+Meteor.call('getScrapedTableData', function (error, result) {
   if (error) {
     console.log("error", error);
   };
 
   console.log(result);
-  console.log(typeof(result));
-  Session.set("headers", result);
+  return Session.set("tableData", result);
+
 });
 
-Template.tweets.helpers({
+Template.salaryTable.helpers({
   rant: function () {
-    return Session.get("headers");
+    return Session.get("tableData");
   }
 });
 
