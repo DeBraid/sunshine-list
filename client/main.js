@@ -1,6 +1,6 @@
 ARGS = {
-    pageNum: '1',
-    org: 'electricity',
+    pageNum: '2',
+    org: 'schoolboards',
     year: '2014'
 }
 
@@ -10,6 +10,9 @@ Meteor.call('getScrapedTableData', ARGS, function (error, result) {
     };
 
     console.log(result);
+    // Salaries.insert(result, function () {
+    //     console.log("GO GO GADGET salaries created");
+    // });
     return Session.set("tableData", result);
 
 });

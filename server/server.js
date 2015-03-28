@@ -18,15 +18,20 @@ Meteor.startup(function () {
                 .text()
                 .split(" / ");
 
-            return $('#right_column > div:nth-child(2) > table > tbody > tr')
+            var data = $('#right_column > div:nth-child(2) > table > tbody > tr')
                 .map(function (i) {
                     var row = {};
                     $(this).find('td').each(function (i) {
                         var rowName = headers[i];
                         row[rowName] = $(this).text();
                     });
+                    // Schools.insert(row);
                     return row;
                 }).get();
+            
+            // var data = JSON.stringify(data);
+            
+            return data;                
         }
     })
 });
