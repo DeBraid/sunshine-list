@@ -2,4 +2,4 @@
 
 ### List of incomes for all public servants.
 
-Find me on Twitter: [@Royal_Arse][http://twitter.com/Royal_Arse]
+Find me on Twitter: (@Royal_Arse)[http://twitter.com/Royal_Arse]
