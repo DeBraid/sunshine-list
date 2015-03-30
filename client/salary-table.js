@@ -1,10 +1,28 @@
 Template.salaryTable.helpers({
   settings: function () {
     return {
-      collection: Schools.find({}).fetch(),
+      collection: Schools.find( { "Salary Paid" : { $gt: "$200,000"} } ),
       rowsPerPage: 20,
       showFilter: true
     };
+  }
+});
+
+Template.employerByType.helpers({
+  employers: function () {
+    return SchoolEmps.find({}).fetch();
+  }
+});
+
+Template.employerByType.events({
+  'click .employer-name': function (e,t) {
+    var value = e.target.textContent.trim();
+    var inp = $('.reactive-table-input');
+    
+    console.log(value);
+    
+    inp.val(value);
+    inp.trigger('keyup');
   }
 });
 
