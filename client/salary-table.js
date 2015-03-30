@@ -3,7 +3,18 @@ Template.salaryTable.helpers({
     return {
       collection: Schools.find( { "Salary Paid" : { $gt: "$200,000"} } ),
       rowsPerPage: 20,
-      showFilter: true
+      showFilter: true,
+      fields: [
+        { key: 'Employer', label: 'Employer' },
+        { key: 'name', label: 'Name', 
+          fn: function (value, object) {
+            return object["Given Name"] + ' ' + object.Surname;
+          } 
+        },
+        { key: 'Position', label: 'Position' },
+        { key: 'Salary Paid', label: 'Salary Paid', sort: 'desc' },
+        { key: 'Taxable Benefits', label: 'Taxable Benefits' }
+      ]   
     };
   }
 });
@@ -26,20 +37,6 @@ Template.employerByType.events({
   }
 });
 
-// Template.salaryTable.helpers({
-//   // top100schools: function () {
-//   //   return Schools.find({ 'Employer' : 'Hamilton-Wentworth District School Board'}).fetch();
-//   // },
-//   hamiltonSchools: function () {
-//     return Schools.find({}).fetch();
-//   },
-//   // topSchool: function () {
-//   //   // return  Schools.find({}. {sort: -1})
-//   //   // return Schools.find({}, {sort: { 'Salary Paid' : -1}});
-//   //   return Schools.find({}, {sort: {date: -1}, limit: 10})
-//   // }
-// });
-
 // ARGS = {
 //     pageNum: '6',
 //     org: 'municipalities',
@@ -57,10 +54,4 @@ Template.employerByType.events({
 //     // });
 //     return Session.set("tableData", result);
 
-// });
-
-// Template.salaryTable.helpers({
-//     // rant: function () {
-//     //     return Session.get("tableData");
-//     // }
 // });
