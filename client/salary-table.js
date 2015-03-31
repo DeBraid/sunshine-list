@@ -1,7 +1,7 @@
 Template.salaryTable.helpers({
   settings: function () {
     return {
-      collection: Schools.find( { "Salary Paid" : { $gt: "$200,000"} } ),
+      collection: Hydro.find( { "Salary Paid" : { $gt: "$200,000"} } ),
       rowsPerPage: 20,
       showFilter: true,
       fields: [
@@ -15,13 +15,13 @@ Template.salaryTable.helpers({
         { key: 'Salary Paid', label: 'Salary Paid', sort: 'desc' },
         { key: 'Taxable Benefits', label: 'Taxable Benefits' }
       ]   
-    };
+    }
   }
 });
 
 Template.employerByType.helpers({
   employers: function () {
-    return SchoolEmps.find({}).fetch();
+    return HydroEmps.find({}).fetch();
   }
 });
 
@@ -36,22 +36,3 @@ Template.employerByType.events({
     inp.trigger('keyup');
   }
 });
-
-// ARGS = {
-//     pageNum: '6',
-//     org: 'municipalities',
-//     year: '2014'
-// }
-
-// Meteor.call('getScrapedTableData', ARGS, function (error, result) {
-//     if (error) {
-//         console.log("error", error);
-//     };
-
-//     console.log(result);
-//     // Salaries.insert(result, function () {
-//     //     console.log("GO GO GADGET salaries created");
-//     // });
-//     return Session.set("tableData", result);
-
-// });
