@@ -1,3 +1,20 @@
+ARGS = {
+    pageNum: '3',
+    org: 'universities',
+    year: '2014'
+}
+
+Meteor.call('getScrapedTableData', ARGS, function (error, result) {
+    if (error) {
+        console.log("error", error);
+    };
+
+    console.log(result);
+    return result;
+    // return Session.set("tableData", result);
+
+});
+
 Template.salaryTable.helpers({
   settings: function () {
     return {
@@ -29,9 +46,6 @@ Template.employerByType.events({
   'click .employer-name': function (e,t) {
     var value = e.target.textContent.trim();
     var inp = $('.reactive-table-input');
-    
-    console.log(value);
-    
     inp.val(value);
     inp.trigger('keyup');
   }

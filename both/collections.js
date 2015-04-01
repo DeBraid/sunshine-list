@@ -2,5 +2,9 @@
 // SchoolEmps  = new Mongo.Collection('schoolEmps');
 // Municipalities  = new Mongo.Collection('municipalities');
 // MuniEmps  = new Mongo.Collection('muniEmps');
-Hydro  = new Mongo.Collection('hydro');
-HydroEmps  = new Mongo.Collection('hydroEmps');
+// Hydro  = new Mongo.Collection('hydro');
+// HydroEmps  = new Mongo.Collection('hydroEmps');
+// Ministries  = new Mongo.Collection('ministries');
+// MinistyEmps  = new Mongo.Collection('ministryEmps');
+Unis  = new Mongo.Collection('unis');
+UniEmps  = new Mongo.Collection('uniEmps');
