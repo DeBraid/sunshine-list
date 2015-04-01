@@ -1,10 +1,10 @@
-ARGS = {
-    pageNum: '3',
-    org: 'universities',
-    year: '2014'
-}
+// ARGS = {
+//     pageNum: '2',
+//     org: 'hospitals',
+//     year: '2014'
+// }
 
-Meteor.call('getScrapedTableData', ARGS, function (error, result) {
+Meteor.call('getScrapedTableData', function (error, result) {
     if (error) {
         console.log("error", error);
     };

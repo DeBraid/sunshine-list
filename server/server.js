@@ -3,11 +3,12 @@ Meteor.startup(function () {
 
     Meteor.methods({
         getScrapedTableData: function (ARGS) {
-            var rootUrl = "http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/orgs-tbs.php",
-                pageNum = "?pageNum_tbs=" + ARGS.pageNum,
-                org = "&organization=" + ARGS.org,
-                year = "&year=" + ARGS.year;
-            result = Meteor.http.get(rootUrl + pageNum + org + year);
+            // var rootUrl = "http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/orgs-tbs.php",
+            //     pageNum = "?pageNum_tbs=" + ARGS.pageNum,
+            //     org = "&organization=" + ARGS.org,
+            //     year = "&year=" + ARGS.year;
+            var url = "http://www.fin.gov.on.ca/en/publications/salarydisclosure/pssd/orgs-tbs.php?organization=other&year=2014";
+            result = Meteor.http.get( url );
             $ = cheerio.load(result.content);
 
             var headers = $('#right_column > div:nth-child(2) > table > thead > tr:nth-child(3) th strong')
@@ -25,7 +26,7 @@ Meteor.startup(function () {
                         var rowName = headers[i];
                         row[rowName] = $(this).text();
                     });
-                    Unis.insert(row);
+                    Misc.insert(row);
                     return row;
                 }).get();
             return data;                
