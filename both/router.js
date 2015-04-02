@@ -1,4 +1,8 @@
 Router.map(function () {
+  this.route('home', {
+    path: '/',
+    template: 'homepage'
+  }),
   this.route('ministries', {
     path: '/ministries',
     template: 'reactive_table_container',
