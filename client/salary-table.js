@@ -4,21 +4,21 @@
 //     year: '2014'
 // }
 
-Meteor.call('getScrapedTableData', function (error, result) {
-    if (error) {
-        console.log("error", error);
-    };
+// Meteor.call('getScrapedTableData', function (error, result) {
+//     if (error) {
+//         console.log("error", error);
+//     };
 
-    console.log(result);
-    return result;
-    // return Session.set("tableData", result);
+//     console.log(result);
+//     return result;
+//     // return Session.set("tableData", result);
 
-});
+// });
 
-Template.salaryTable.helpers({
+Template.reactiveTableContainer.helpers({
   settings: function () {
     return {
-      collection: Hydro.find( { "Salary Paid" : { $gt: "$200,000"} } ),
+      // collection: Ministries.find( { "Salary Paid" : { $gt: "$200,000"} } ),
       rowsPerPage: 20,
       showFilter: true,
       fields: [
@@ -36,13 +36,7 @@ Template.salaryTable.helpers({
   }
 });
 
-Template.employerByType.helpers({
-  employers: function () {
-    return HydroEmps.find({}).fetch();
-  }
-});
-
-Template.employerByType.events({
+Template.reactiveTableContainer.events({
   'click .employer-name': function (e,t) {
     var value = e.target.textContent.trim();
     var inp = $('.reactive-table-input');

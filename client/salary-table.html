@@ -1,23 +1,22 @@
 <template name="salaryTable">
-  <h4>For first time ever >100,000 public servants income exceeds $100,000 per year.  Horrible news for Ontario taxpayers, a province with more debt per capita than California.</h4>
   <p class="pull-right">Work in progress, be patient with dataset this large, it can be slow!</p>
-
-  {{> employerByType}}
-
-  {{> reactiveTable settings=settings }}
+  {{> reactiveTableContainer }}
 </template>
 
-<template name="employerByType">
-  
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Employers
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-  {{#each employers }}
-    <li class="employer-name" role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ employer }}</a></li>
-  {{/each}}
-  </ul>
-</div>
+<template name="reactiveTableContainer">
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      Employers
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+    
+    {{#each employers }}
+      <li class="employer-name" role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ employer }}</a></li>
+    {{/each}}
+    </ul>
+  </div>
+  {{#with sunshineListData }}
+    {{> reactiveTable collection=this settings=settings }}
+  {{/with}}
 </template>

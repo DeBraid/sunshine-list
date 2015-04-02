@@ -4,8 +4,8 @@
 // MuniEmps  = new Mongo.Collection('muniEmps');
 // Hydro  = new Mongo.Collection('hydro');
 // HydroEmps  = new Mongo.Collection('hydroEmps');
-// Ministries  = new Mongo.Collection('ministries');
-// MinistyEmps  = new Mongo.Collection('ministryEmps');
+Ministries  = new Mongo.Collection('ministries');
+MinistryEmps  = new Mongo.Collection('ministryEmps');
 // Unis  = new Mongo.Collection('unis');
 // UniEmps  = new Mongo.Collection('uniEmps');
 // Hospitals  = new Mongo.Collection('hospitals');
@@ -14,7 +14,7 @@
 // Judiciary = new Mongo.Collection('judiciary');
 // Crown = new Mongo.Collection('crown');
 // Colleges = new Mongo.Collection('colleges');
-Misc = new Mongo.Collection('misc');
+// Misc = new Mongo.Collection('misc');
 
 
 

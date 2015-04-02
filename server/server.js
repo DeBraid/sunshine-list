@@ -26,7 +26,7 @@ Meteor.startup(function () {
                         var rowName = headers[i];
                         row[rowName] = $(this).text();
                     });
-                    Misc.insert(row);
+                    // Misc.insert(row);
                     return row;
                 }).get();
             return data;                
