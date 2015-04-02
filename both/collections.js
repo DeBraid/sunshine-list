@@ -1,21 +1,22 @@
-// Schools  = new Mongo.Collection('schools');
-// SchoolEmps  = new Mongo.Collection('schoolEmps');
-// Municipalities  = new Mongo.Collection('municipalities');
-// MuniEmps  = new Mongo.Collection('muniEmps');
-// Hydro  = new Mongo.Collection('hydro');
-// HydroEmps  = new Mongo.Collection('hydroEmps');
+Schools  = new Mongo.Collection('schools');
+SchoolEmps  = new Mongo.Collection('schoolEmps');
+Municipalities  = new Mongo.Collection('municipalities');
+MuniEmps  = new Mongo.Collection('muniEmps');
+Hydro  = new Mongo.Collection('hydro');
+HydroEmps  = new Mongo.Collection('hydroEmps');
 Ministries  = new Mongo.Collection('ministries');
 MinistryEmps  = new Mongo.Collection('ministryEmps');
-// Unis  = new Mongo.Collection('unis');
-// UniEmps  = new Mongo.Collection('uniEmps');
-// Hospitals  = new Mongo.Collection('hospitals');
-// HospEmps  = new Mongo.Collection('hospEmps');
-// Legislative = new Mongo.Collection('legislative');
-// Judiciary = new Mongo.Collection('judiciary');
-// Crown = new Mongo.Collection('crown');
-// Colleges = new Mongo.Collection('colleges');
-// Misc = new Mongo.Collection('misc');
-
-
-
-
+Unis  = new Mongo.Collection('unis');
+UniEmps  = new Mongo.Collection('uniEmps');
+Hospitals  = new Mongo.Collection('hospitals');
+HospitalEmps  = new Mongo.Collection('hospitalEmps');
+Legislative = new Mongo.Collection('legislative');
+LegislativeEmps = new Mongo.Collection('legislativeEmps');
+Judiciary = new Mongo.Collection('judiciary');
+JudiciaryEmps = new Mongo.Collection('judiciaryEmps');
+Crown = new Mongo.Collection('crown');
+CrownEmps = new Mongo.Collection('crownEmps');
+Colleges = new Mongo.Collection('colleges');
+CollegesEmps = new Mongo.Collection('collegesEmps');
+Misc = new Mongo.Collection('misc');
+MiscEmps = new Mongo.Collection('miscEmps');
