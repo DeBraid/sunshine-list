@@ -1,23 +1,14 @@
+Router.configure({
+  layoutTemplate: 'main_layout',
+  loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
+});
+
 Router.map(function () {
   this.route('home', {
     path: '/',
     template: 'homepage'
   });
-/*
-DIVISION SPECIFIC ROUTES
-  colleges - 150
-  crown - 
-  hospitals
-  hydro
-  judiciary
-  legislative
-  ministries
-  misc
-  municipalities
-  schools
-  unis
-*/ 
-
 
   this.route('colleges', {
     path: '/colleges',
@@ -64,7 +55,7 @@ DIVISION SPECIFIC ROUTES
     },
     data: function () {
       return {
-        sunshineListData: Hospitals.find( { "Salary Paid" : { $gt: "$300,000"} } ),
+        sunshineListData: Hospitals.find( { "Salary Paid" : { $gt: "$400,000"} } ),
         employers: HospitalEmps.find().fetch()
       }
     }
@@ -98,7 +89,7 @@ DIVISION SPECIFIC ROUTES
     },
     data: function () {
       return {
-        sunshineListData: Judiciary.find( { "Salary Paid" : { $gt: "$300,000"} } ),
+        sunshineListData: Judiciary.find( { "Salary Paid" : { $gt: "$270,000"} } ),
         employers: JudiciaryEmps.find().fetch()
       }
     }
@@ -115,7 +106,7 @@ DIVISION SPECIFIC ROUTES
     },
     data: function () {
       return {
-        sunshineListData: Legislative.find( { "Salary Paid" : { $gt: "$300,000"} } ),
+        sunshineListData: Legislative.find().fetch(),
         employers: LegislativeEmps.find().fetch()
       }
     }
@@ -183,7 +174,7 @@ DIVISION SPECIFIC ROUTES
     },
     data: function () {
       return {
-        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$300,000"} } ),
+        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$100,000"} } ),
         employers: SchoolEmps.find().fetch()
       }
     }
@@ -205,6 +196,4 @@ DIVISION SPECIFIC ROUTES
       }
     }
   });
-
-
 });

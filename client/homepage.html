@@ -3,7 +3,9 @@
     <div class="row">
       {{> header }}
       {{#each divisions }}
-        <button type="button" class="btn btn-default"><a href="{{ pathFor this }}">{{ this }}</a></button>
+        <a href="{{ pathFor this }}"> 
+          <button type="button" class="btn btn-default">{{this}}</button>
+        </a>
       {{/each}}
     </div>
     <div class="row">
