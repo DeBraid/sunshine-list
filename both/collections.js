@@ -17,6 +17,6 @@ JudiciaryEmps = new Mongo.Collection('judiciaryEmps');
 Crown = new Mongo.Collection('crown');
 CrownEmps = new Mongo.Collection('crownEmps');
 Colleges = new Mongo.Collection('colleges');
-CollegesEmps = new Mongo.Collection('collegesEmps');
+CollegeEmps = new Mongo.Collection('collegeEmps');
 Misc = new Mongo.Collection('misc');
 MiscEmps = new Mongo.Collection('miscEmps');

@@ -3,7 +3,7 @@
     <div class="row">
       {{> header }}
       {{#each divisions }}
-        <button type="button" class="btn btn-default"><a href="{{ pathFor 'hospitals' }}">{{ this }}</a></button>
+        <button type="button" class="btn btn-default"><a href="{{ pathFor this }}">{{ this }}</a></button>
       {{/each}}
     </div>
     <div class="row">

@@ -1,19 +1,21 @@
 <template name="salaryTable">
-  <p class="pull-right">Work in progress, be patient with dataset this large, it can be slow!</p>
-  {{> reactiveTableContainer }}
+  <div class="container">
+    <div class="row">
+      <p class="pull-right">Work in progress, be patient with dataset this large, it can be slow!</p>
+      {{> reactiveTableContainer }}
+    </div>
+  </div>
 </template>
 
 <template name="reactiveTableContainer">
   <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-      Employers
-      <span class="caret"></span>
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+      Employers <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-    
-    {{#each employers }}
-      <li class="employer-name" role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ employer }}</a></li>
-    {{/each}}
+    <ul class="dropdown-menu scrollable-menu" role="menu">
+      {{#each employers }}
+        <li class="employer-name" role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ employer }}</a></li>
+      {{/each}}
     </ul>
   </div>
   {{#with sunshineListData }}

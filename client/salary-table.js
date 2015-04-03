@@ -18,8 +18,7 @@
 Template.reactiveTableContainer.helpers({
   settings: function () {
     return {
-      // collection: Ministries.find( { "Salary Paid" : { $gt: "$200,000"} } ),
-      rowsPerPage: 20,
+      rowsPerPage: 10,
       showFilter: true,
       fields: [
         { key: 'Employer', label: 'Employer' },
