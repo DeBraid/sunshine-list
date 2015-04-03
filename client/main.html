@@ -8,6 +8,19 @@
       {{> header }}
     </div>
     <div class="row">
+      {{#each divisions }}
+        <a href="{{ pathFor this }}"> 
+          <button type="button" 
+                  style="margin:0.5em;
+                        padding:1em 3.5em;
+                        font-size:1em;" 
+                  class="btn btn-default">
+                    {{this}}
+                  </button>
+        </a>
+      {{/each}}
+    </div>
+    <div class="row">
       {{> salaryTable }}
     </div>
   </div>

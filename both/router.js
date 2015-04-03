@@ -174,7 +174,7 @@ Router.map(function () {
     },
     data: function () {
       return {
-        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$100,000"} } ),
+        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$150,000"} } ),
         employers: SchoolEmps.find().fetch()
       }
     }
