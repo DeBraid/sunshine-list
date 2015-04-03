@@ -21,7 +21,11 @@ Template.reactiveTableContainer.helpers({
       rowsPerPage: 10,
       showFilter: true,
       fields: [
-        { key: 'Employer', label: 'Employer' },
+        { key: 'Employer', label: 'Employer', 
+          fn: function (value, object) {
+            return object.Employer.split(' / ')[0];
+          } 
+        },
         { key: 'name', label: 'Name', 
           fn: function (value, object) {
             return object["Given Name"] + ' ' + object.Surname;
