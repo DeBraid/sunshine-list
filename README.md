@@ -1,6 +1,6 @@
 ## 2014 Ontario Sunshine List
 
-### List of incomes for all public servants.
+### List of incomes for all public servants earning over $100,000 per year.
 
 To improve on the UX for those interested in how the government is spending their money.
 
