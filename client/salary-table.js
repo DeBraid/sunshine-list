@@ -1,20 +1,3 @@
-// ARGS = {
-//     pageNum: '2',
-//     org: 'hospitals',
-//     year: '2014'
-// }
-
-// Meteor.call('getScrapedTableData', function (error, result) {
-//     if (error) {
-//         console.log("error", error);
-//     };
-
-//     console.log(result);
-//     return result;
-//     // return Session.set("tableData", result);
-
-// });
-
 Template.reactiveTableContainer.helpers({
   settings: function () {
     return {
