@@ -2,4 +2,8 @@
 
 ### List of incomes for all public servants.
 
-Find me on Twitter: (@Royal_Arse)[http://twitter.com/Royal_Arse]
+To improve on the UX for those interested in how the government is spending their money.
+
+Data Source: http://www.ontario.ca/government/public-sector-salary-disclosure
+
+### Follow me on Twitter: [@Royal_Arse](http://twitter.com/Royal_Arse)
