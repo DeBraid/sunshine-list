@@ -21,7 +21,7 @@ Router.map(function () {
     },
     data: function () {
       return {
-        sunshineListData: Colleges.find( { "Salary Paid" : { $gt: "$150,000"} } ),
+        sunshineListData: Colleges.find( { "Salary Paid" : { $gt: "$225,000"} } ),
         employers: CollegeEmps.find().fetch()
       }
     }
@@ -174,7 +174,7 @@ Router.map(function () {
     },
     data: function () {
       return {
-        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$150,000"} } ),
+        sunshineListData: Schools.find( { "Salary Paid" : { $gt: "$190,000"} } ),
         employers: SchoolEmps.find().fetch()
       }
     }
@@ -191,7 +191,7 @@ Router.map(function () {
     },
     data: function () {
       return {
-        sunshineListData: Unis.find( { "Salary Paid" : { $gt: "$300,000"} } ),
+        sunshineListData: Unis.find( { "Salary Paid" : { $gt: "$350,000"} } ),
         employers: UniEmps.find().fetch()
       }
     }
